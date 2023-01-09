@@ -1,10 +1,11 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-
 const bodyParser= require("body-parser");
 
-
+// Middlewares
+app.use(express.static("public"));
+app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}))
 
 const https = require("https");
