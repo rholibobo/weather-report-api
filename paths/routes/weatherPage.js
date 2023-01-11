@@ -18,7 +18,7 @@ router.get("/report", (req, res) => {
 router.post("/report", express.urlencoded({ extended: true }), (req, res) => {
   console.log(req.body.place)
   let place = req.body.place;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=f16d5c6c3e96cee5d472ccf7ff15f5d9`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=${process.env.API_KEY}`
 
   https.get(url, (response) => {
     console.log(response.statusCode);
