@@ -41,18 +41,59 @@ main{
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    position: relative;
+    
     
 }
+
 main section{
     display: flex;
     justify-content: space-between;
+    gap: 15px;
     align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 5;
+    transition: all 1s ease-in-out;
+    /* transform: translateX(10%) scale(0); */
+    animation: scaleAnim .5s ease-in-out;
+    color: black;
 }
+    @keyframes scaleAnim {
+        0% {
+            transform: translateY(-100%) scaleY(0);
+        }
+
+        100% {
+            transform: translateY(0) scaleY(1);
+        }
+    }
+    
+
 .aside-one{
     width: 50%;
 }
 .aside-two{
-    width: 50%;
-    padding: 12rem;
-    border: 2px solid red;
+    width: 60%;
+    height: 300px;
+    background-color: rgba(219, 206, 206, 0.2);
+    display: flex;
+    justify-content: center;
+    
+}
+form{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+form input{
+    outline: none;
+    width: 100%;
+    padding: 0.4rem;
+}
+button{
+    width:40%;
+    border: none;
+    padding: 0.3rem;
+    background-color: #093697;
 }
